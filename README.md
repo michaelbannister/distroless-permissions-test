@@ -13,6 +13,6 @@ $ docker run --rm -it -u 1337:1337 michaelbannister/distroless-permissions-test
 docker: Error response from daemon: OCI runtime create failed: container_linux.go:346: starting container process caused "chdir to cwd (\"/home/nonroot\") set in config.json failed: permission denied": unknown.
 ```
 
-You get the same behaviour in Kubernetes if you deploy [job.yaml].
+You get the same behaviour in Kubernetes if you deploy [job.yaml](./job.yaml).
 
-But [kind](https://kind.sigs.k8s.io) will run the job successfully. It only fails if you also drop capabilities, as in [job-drop-caps.yaml]
+But [kind](https://kind.sigs.k8s.io) will run the job successfully. It only fails if you also drop capabilities, as in [job-drop-caps.yaml](./job-drop-caps.yaml)
