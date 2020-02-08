@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: distroless-permissions-test
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      containers:
+      - name: distroless-permissions-test
+        image: michaelbannister/distroless-permissions-test
+      securityContext:
+        runAsUser: 1337
+        runAsNonRoot: true
+      restartPolicy: Never
+  
