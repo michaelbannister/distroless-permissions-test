@@ -1,3 +1,5 @@
+michaelbannister/distroless-permissions-test ([docker hub](https://hub.docker.com/r/michaelbannister/distroless-permissions-test/tags))
+
 This is a trivial image based on [https://github.com/GoogleContainerTools/distroless](distroless), specifically the `nonroot` variant which sets `USER 65532` and `WORKDIR /home/nonroot`, where the filesystem permission are as shown:
 
 ```
